@@ -1,0 +1,50 @@
+import java.util.*; 
+public class studentgradetracker {
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of subjects:");
+        int num=sc.nextInt();
+        int[] marks=new int[num];
+        int total=0;
+        for(int i=0;i<num;i++)
+        {
+            System.out.println("Enter the marks obtained in each subject"+(i+1)+":");
+            marks[i]=sc.nextInt();
+            total+=marks[i];
+        }
+            double per =(double) total/(num*100)*100;
+            System.out.println("Your result is:");
+            System.out.println("Total Marks is:"+total);
+            System.out.println("Your Percentae is:"+per+"%");
+            
+
+            if(per<60)
+            {
+            System.out.println("grade D:"+per);
+            }
+            else if(per<70)
+            {
+            System.out.println("grade C:"+per);
+            }
+            else if(per<80)
+            {
+            System.out.println("grade B:"+per);
+            }
+            else if(per<90)
+            {
+            System.out.println("grade A:"+per);
+            }
+            else if(per<100)
+            {
+            System.out.println("grade A+:"+per);
+            }
+            else
+            {
+            System.out.println("Failed:"+per);
+            }
+            
+
+    }
+
+}
